@@ -4,8 +4,8 @@
     <%= render 'logo' %>
     <nav id="colorlib-main-menu" role="navigation">
         <ul>
-            <li class="colorlib-active"><a href="index.html">Home</a></li>
-            <li><a href="photography.html">Photography</a></li>
+            <li class="colorlib-active"><%= link_to "Home", root_path, method: :get %></li>
+            <li><%= link_to "Photography", photograph_path, method: :get %></li>
             <li><a href="travel.html">Travel</a></li>
             <li><a href="fashion.html">Fashion</a></li>
             <li><%= link_to "About", about_path, method: :get %></li>
@@ -23,7 +23,9 @@
                 <div class="img mb-4" style="background-image: url(/assets/author.jpg);"></div>
                 <div class="desc">
                     <h2 class="subheading">Hello I'm</h2>
-                    <h1 class="mb-4">Kris Dhinal</h1>
+                    <h1 class="mb-4">
+                        <%= render 'greeting_span' %>
+                    </h1> 
                     <p class="mb-4">I am A Blogger Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     <p>
                         <%= link_to about_path, :class => 'btn-custom', method: :get do %>
@@ -437,7 +439,7 @@
     <div class="col-md-12">
 
     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+<%= render 'main_footer' %>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
     </div>
 </div>

@@ -7,4 +7,7 @@ class HomePageController < ApplicationController
 
   def contact
   end
+
+  def photograph
+  end
 end
