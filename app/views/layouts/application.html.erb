@@ -23,6 +23,11 @@
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+                <%= value %>
+          </div>
+    <% end %>
     <%= yield %>
     <script src="/assets/jquery.min.js"></script>
     <script src="/assets/jquery-migrate-3.0.1.min.js"></script>
